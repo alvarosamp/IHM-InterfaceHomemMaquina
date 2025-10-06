@@ -1,0 +1,19 @@
+.lable-nota {
+  margin-top: 10px;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  color: white;
+}
+
+/* Cores das faixas */
+.vermelho {
+  background-color: red;
+}
+.laranja {
+  background-color: orange;
+}
+.verde {
+  background-color: green;
+}
