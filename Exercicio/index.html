@@ -7,18 +7,9 @@
   <link rel="stylesheet" href="app.css" />
 </head>
 <body>
-  <div id="theme-menu">
-    <div class="menu-content">
-      <button onclick="setTheme('inatel'); toggleMenu();">🎨 Tema Padrão</button>
-      <button onclick="setTheme('lemon'); toggleMenu();">🍋 Tema Limão</button>
-      <button onclick="setTheme('dark'); toggleMenu();">🌙 Tema Escuro</button>
-      <button class="close-btn" onclick="toggleMenu()">×</button>
-    </div>
-  </div>
-
   <div class="app">
     <header class="app-header">
-      <button class="icon-btn" aria-label="menu" onclick="toggleMenu()">☰</button>
+      <button class="icon-btn" aria-label="menu">☰</button>
       <h1 class="brand">Inatel</h1>
       <button class="icon-btn" aria-label="perfil">👤</button>
     </header>
@@ -48,7 +39,21 @@
     </main>
   </div>
 
-  <script src="script_componente.js"></script>
-  <script src="app.js"></script>
+    <!-- botão lateral para trocar tema -->
+    <div id="color-tools" aria-hidden="true">
+      <button id="color-toggle" class="color-toggle" aria-label="Abrir opções de cor">🎨</button>
+      <div id="color-panel" class="color-panel" role="dialog" aria-label="Escolher tema de cores">
+        <strong>Temas</strong>
+        <div class="color-options">
+          <button class="color-swatch" data-func="temaInatel" title="Inatel" style="background:#126ae2"></button>
+          <button class="color-swatch" data-func="temaLim" title="Lim" style="background:#38184C"></button>
+          <button class="color-swatch" data-func="temaDark" title="Dark" style="background:#0f172a"></button>
+        </div>
+        <button id="color-reset" class="color-reset">Restaurar</button>
+      </div>
+    </div>
+
+  <script src="script_comp.js"></script>
+    <script src="color-tools.js"></script>
 </body>
 </html>
