@@ -1,0 +1,74 @@
+:root{
+  --brand:#126ae2;
+  --bg:#eef3f7;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+
+  /* variáveis que o componente usa (herdam no shadow DOM) */
+  --frequencia:#126ae2;
+  --nota:#126ae2;
+  --prova:#126ae2;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji','Segoe UI Emoji';
+  color:var(--text);
+  background:var(--bg);
+}
+
+.app{
+  max-width:390px;
+  margin:0 auto;
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.app-header{
+  position:sticky; top:0;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 16px;
+  background:var(--card);
+  border-bottom:1px solid #dde3ea;
+  box-shadow:0 2px 6px rgba(14,30,37,.06);
+  z-index:10;
+}
+
+.brand{
+  font-size:20px; margin:0; color:var(--brand); letter-spacing:.5px;
+}
+
+.icon-btn{
+  font-size:20px; line-height:1;
+  background:transparent; border:0; cursor:pointer; padding:6px 8px;
+}
+
+.app-content{
+  padding:14px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:14px;
+  box-shadow:0 8px 24px rgba(14,30,37,.08);
+  padding:14px;
+  margin-bottom:14px;
+}
+
+.hello{ margin:0 0 8px 0; font-size:18px }
+.notif-list{ margin:0; padding-left:18px; color:var(--muted) }
+.notif-list li{ margin:6px 0 }
+
+.event-card{ padding:0; overflow:hidden }
+.event-cover{
+  height:140px;
+  background:linear-gradient(120deg,#4f46e5,#06b6d4,#22c55e);
+  filter:saturate(120%);
+}
+.event-body{ padding:14px }
+.event-body h3{ margin:0 0 6px 0 }
+.event-meta{ display:flex; gap:12px; color:var(--muted); font-size:14px }
